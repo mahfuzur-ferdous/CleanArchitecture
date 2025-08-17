@@ -53,7 +53,7 @@ namespace WebApi.Controllers
 
             await _repo.UpdateAsync(product);
 
-            return NoContent();
+            return Ok("Product updated successfully");
         }
 
 
@@ -61,7 +61,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _repo.DeleteAsync(id);
-            return NoContent();
+            return Ok("Product Deleted Successfully");
         }
     }
 }
